@@ -32,6 +32,10 @@ img {
   width: 600px;
 }
 
+.container {
+  max-width: 960px;
+  margin: auto;
+}
 /* Class selectors */
 .product-thumbnail {
   width: 250px;
@@ -42,8 +46,12 @@ img {
 /* Det riktiga CSS:et */
 /* Navbar */
 nav {
+  position: fixed;
+  width: 100%;
   background-color: #041347;
   height: 50px;
+  top: 0;
+  left: 0;
 }
 
 nav ul {
@@ -75,4 +83,73 @@ nav ul li a {
   height: 100%;
   z-index: -1;
   object-fit: cover;
+}
+
+.landing-text {
+  width: 100%;
+  text-align: justify;
+}
+
+/* Product Page */
+.product {
+  border: solid 1px #a7a6a6;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Contact Us Page */
+form {
+  border: solid 1px blue;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  width: 300px;
+}
+
+.btn {
+  background: transparent;
+  border: solid 1px blue;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-1 {
+  margin-bottom: 5px;
+}
+.mt-1 {
+  margin-top: 5px;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.mb-2 {
+  margin-bottom: 10px;
+}
+.mt-2 {
+  margin-top: 10px;
+}
+
+.mr-2 {
+  margin-right: 10px;
+}
+
+.clear {
+  clear: both;
 }
