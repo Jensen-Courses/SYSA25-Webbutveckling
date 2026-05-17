@@ -1,0 +1,102 @@
+[
+  {
+    "itemNumber": "1000",
+    "productName": "Core 2000",
+    "imageUrl": "/images/shoe-1.jpg",
+    "price": 1295,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Shoes",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 38
+  },
+  {
+    "itemNumber": "1001",
+    "productName": "Trail 25",
+    "imageUrl": "/images/shoe-2.jpg",
+    "price": 1895,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Shoes",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 15
+  },
+  {
+    "itemNumber": "1002",
+    "productName": "Gel 27",
+    "imageUrl": "/images/shoe-3.jpg",
+    "price": 2295,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Shoes",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 8
+  },
+  {
+    "itemNumber": "1003",
+    "productName": "Sonoma 7GTX",
+    "imageUrl": "/images/shoe-4.jpg",
+    "price": 2295,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Shoes",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 5
+  },
+  {
+    "itemNumber": "1004",
+    "productName": "Road White t-shirt",
+    "imageUrl": "/images/t-shirt-1.jpg",
+    "price": 495,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "T-Shirts",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 20
+  },
+  {
+    "itemNumber": "1005",
+    "productName": "Limited Running t-shirt",
+    "imageUrl": "/images/t-shirt-2.jpg",
+    "price": 385,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "T-Shirts",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 11
+  },
+  {
+    "itemNumber": "1006",
+    "productName": "Road Black t-shirt",
+    "imageUrl": "/images/t-shirt-3.jpg",
+    "price": 495,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Dubbelverkande cylinder",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 7
+  },
+  {
+    "itemNumber": "1007",
+    "productName": "Vest pro",
+    "imageUrl": "/images/vest-1.jpg",
+    "price": 895,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Vests",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 5
+  },
+  {
+    "itemNumber": "1008",
+    "productName": "Vest unisex",
+    "imageUrl": "/images/vest-2.jpg",
+    "price": 995,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Vests",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 7
+  },
+  {
+    "itemNumber": "1009",
+    "productName": "Jacket",
+    "imageUrl": "/images/jacket-1.jpg",
+    "price": 1495,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "type": "Jackets",
+    "supplierId": "565300292c484620bbc3e210b2e8637b",
+    "itemsInStock": 14
+  }
+]
