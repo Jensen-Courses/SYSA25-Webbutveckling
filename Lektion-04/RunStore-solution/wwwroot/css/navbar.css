@@ -1,0 +1,38 @@
+/* Navbar */
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #1e1a4d;
+  height: 3.75rem;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  border-bottom: solid 1px #eef2ff;
+}
+
+nav ul {
+  display: flex;
+
+  gap: 0.8rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #eef2ff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #eef2ff;
+  gap: 0.8rem;
+}
+.logo img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
