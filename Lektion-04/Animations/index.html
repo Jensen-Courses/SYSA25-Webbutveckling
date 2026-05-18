@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      .box {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        background-color: greenyellow;
+        border: solid 1px #333;
+        /* animation-name: bob;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate; */
+
+        animation: bob 5s ease-in-out 3s alternate forwards;
+      }
+
+      @keyframes bob {
+        from {
+          top: 0;
+          left: 0;
+        }
+        to {
+          top: 200px;
+          left: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

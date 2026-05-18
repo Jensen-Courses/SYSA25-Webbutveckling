@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        border: solid 1px #333;
+        transition: all 2s ease-in-out;
+      }
+
+      .box:hover {
+        background-color: blue;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="box"></div>
+    </main>
+  </body>
+</html>
