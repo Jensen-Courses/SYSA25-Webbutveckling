@@ -1,0 +1,32 @@
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product-item {
+  width: 250px;
+  border: solid 1px #eef2ff;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  transition: transform 0.2s ease-out;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item h4 {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.product-item img {
+  width: 100%;
+}
+
+.product-item p {
+  float: right;
+  margin-right: 0.5rem;
+}

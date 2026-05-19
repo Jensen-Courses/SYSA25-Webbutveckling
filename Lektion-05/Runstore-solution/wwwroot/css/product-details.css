@@ -1,0 +1,35 @@
+#product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+#product-details > section {
+  border: solid 1px #eef2ff;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
+#product-details img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#product-details section section {
+  text-align: justify;
+}
+
+#product-details div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+#product-details div p:last-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
