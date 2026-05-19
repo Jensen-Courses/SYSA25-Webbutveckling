@@ -48,6 +48,53 @@ a {
   text-decoration: none;
 }
 
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px #eef2ff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+form .form-controls {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+textarea {
+  min-width: 400px;
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.4rem;
+  font-size: 1.1rem;
+}
+
+form input {
+  background: none;
+  border-bottom: solid 1px #eef2ff;
+  color: #eef2ff;
+  /* border: solid 1px #eef2ff;
+  border-radius: 0.3rem; */
+}
+
+form textarea {
+  min-height: 7rem;
+  font-family: inherit;
+  margin-top: 0.3rem;
+}
+
+form label {
+  padding-left: 0.4rem;
+}
+
+form button {
+  max-width: 400px;
+}
+
 .container {
   max-width: 960px;
   margin: auto;

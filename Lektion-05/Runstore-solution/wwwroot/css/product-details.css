@@ -6,6 +6,11 @@
   margin: auto;
 }
 
+#product-details h2 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 #product-details > section {
   border: solid 1px #eef2ff;
   padding: 0.8rem;
