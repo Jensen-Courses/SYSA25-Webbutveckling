@@ -5,12 +5,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #1e1a4d;
+  background-color: var(--primary-color);
   height: 3.75rem;
   top: 0;
   left: 0;
   padding: 1rem;
-  border-bottom: solid 1px #eef2ff;
+  border-bottom: solid 1px var(--primary-border-color);
   z-index: 1;
   opacity: 0.9;
 }
@@ -23,21 +23,21 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #eef2ff;
+  color: var(--primary-text-color);
   transition: all 0.3s ease-out;
 }
 
 nav ul li a:hover {
-  border-bottom: solid 1px #f54900;
+  border-bottom: solid 1px var(--secondary-color);
   font-weight: 500;
   font-size: 1.1rem;
-  color: #f54900;
+  color: var(--secondary-color);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  color: #eef2ff;
+  color: var(--primary-text-color);
   gap: 0.8rem;
 }
 .logo img {

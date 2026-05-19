@@ -2,7 +2,7 @@
   border: 0;
   border-radius: 0.15rem;
   background: transparent;
-  color: #eef2ff;
+  color: var(--primary-text-color);
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.2;
@@ -16,15 +16,16 @@
 }
 
 .btn-rounded {
-  border: solid 1px #eef2ff;
+  border: solid 1px var(--primary-border-color);
   border-radius: 1.2rem;
 }
 
 .btn:hover {
-  background-color: #615fff;
-  border: solid 1px #f54900;
+  background-color: var(--button-hover-background);
+  border: solid 1px var(--secondary-color);
   font-weight: 700;
 }
+
 .text-center {
   text-align: center;
 }

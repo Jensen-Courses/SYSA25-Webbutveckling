@@ -1,0 +1,8 @@
+#confirmation-page {
+  display: flex;
+  justify-content: center;
+}
+
+#confirmation-page span {
+  font-weight: 700;
+}

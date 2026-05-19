@@ -12,7 +12,7 @@
 }
 
 #product-details > section {
-  border: solid 1px #eef2ff;
+  border: solid 1px var(--primary-border-color);
   padding: 0.8rem;
   border-radius: 1rem;
 }
