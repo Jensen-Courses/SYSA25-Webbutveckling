@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using RunStore.Models;
 
 namespace RunStore.Controllers
 {
@@ -8,13 +9,14 @@ namespace RunStore.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            var model = new ContactModel();
+            return View(model);
         }
 
         [HttpPost]
-        public ActionResult Add()
+        public ActionResult Add(ContactModel model)
         {
-            return View();
+            return View("Confirmation", model);
         }
 
     }
