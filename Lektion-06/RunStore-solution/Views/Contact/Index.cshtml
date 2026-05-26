@@ -1,0 +1,22 @@
+@model RunStore.Models.ContactModel
+
+<h1>Contact Us</h1>
+<form asp-action="Add">
+    <div class="form-controls">
+        <label for="firstName">Förnamn</label>
+        <input asp-for="FirstName" type="text" name="firstName" id="firstName">
+    </div>
+    <div class="form-controls">
+        <label for="lastName">Efternamn</label>
+        <input asp-for="LastName" type="text" name="lastName" id="lastName">
+    </div>
+    <div class="form-controls">
+        <label for="email">E-Post</label>
+        <input asp-for="Email" type="text" name="email" id="email">
+    </div>
+    <div class="form-controls">
+        <label for="message">Message</label>
+        <textarea asp-for="Message" name="message" id="message"></textarea>
+    </div>
+    <button class="btn btn-rounded">Skicka</button>
+</form>
