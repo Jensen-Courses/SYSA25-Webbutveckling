@@ -1,5 +1,7 @@
 const data = [
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: '234d1eaaa87149429b0bbd6e8dc759c0',
     imageUrl: '/images/shoe-1.jpg',
     itemNumber: '1000',
@@ -8,6 +10,8 @@ const data = [
     price: 1295,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: '40f6e853ffb2424bb3eb652ba03576f2',
     imageUrl: '/images/shoe-3.jpg',
     itemNumber: '1002',
@@ -16,6 +20,8 @@ const data = [
     price: 2295,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: '7a62c46d3a4b4ac4a4133ba66e47b6ec',
     imageUrl: '/images/jacket-1.jpg',
     itemNumber: '1009',
@@ -24,6 +30,8 @@ const data = [
     price: 1495,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: '7b460cb714334dafa88a3bfc28388555',
     imageUrl: '/images/t-shirt-2.jpg',
     itemNumber: '1005',
@@ -32,6 +40,8 @@ const data = [
     price: 385,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: 'f31656af57914954a59269e2ff0a8da9',
     imageUrl: '/images/t-shirt-3.jpg',
     itemNumber: '1006',
@@ -40,6 +50,8 @@ const data = [
     price: 495,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: 'b626e20836c34ee0b6c5156ee41130e5',
     imageUrl: '/images/t-shirt-1.jpg',
     itemNumber: '1004',
@@ -48,6 +60,8 @@ const data = [
     price: 495,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: 'c352647dd9d641408a8afe289c8286c6',
     imageUrl: '/images/shoe-4.jpg',
     itemNumber: '1003',
@@ -56,6 +70,8 @@ const data = [
     price: 2295,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: '7f5f6b47bf474f6c9c6dea38f7af192e',
     imageUrl: '/images/shoe-2.jpg',
     itemNumber: '1001',
@@ -64,6 +80,8 @@ const data = [
     price: 1895,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: 'ed9528f716d5418a92e349b90bc7c509',
     imageUrl: '/images/vest-1.jpg',
     itemNumber: '1007',
@@ -72,6 +90,8 @@ const data = [
     price: 895,
   },
   {
+    description:
+      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     id: 'b36264a01e9147cd845157c0b9b000e9',
     imageUrl: '/images/vest-2.jpg',
     itemNumber: '1008',

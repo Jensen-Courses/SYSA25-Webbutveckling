@@ -16,7 +16,7 @@ public class ProductsController(
     {
         var spec = new ProductSpecification(args);
         var result = await uow.Repository<Product>().ListAsync(spec);
-        var products = mapper.Map<IReadOnlyList<ListProductsDto>>(result);
+        var products = mapper.Map<IReadOnlyList<ProductDto>>(result);
         return await CreatePagedResult(uow.Repository<Product>(), spec, args.PageNumber, args.PageSize, products);
     }
 
