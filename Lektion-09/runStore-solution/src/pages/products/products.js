@@ -3,11 +3,11 @@ import data from '../../utilities/data-client.js';
 
 const productList = document.querySelector('#product-list');
 
-const initApp = () => {
+const initApp = async () => {
   document.querySelector('header').insertAdjacentHTML('afterbegin', navbar);
-  // const client = new data();
-  // const products = client.listAll();
-  displayProducts(new data().listAll());
+  const client = new data('../../data/products.json');
+  const products = await client.listAll();
+  displayProducts(products);
 };
 
 const displayProducts = (products) => {
