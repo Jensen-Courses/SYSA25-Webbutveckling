@@ -13,13 +13,14 @@ const initApp = () => {
 const loadCart = () => {
   const cart = new Cart('cart');
   const cartItems = cart.getCartItems();
-  console.log(cartItems);
   displayCartContent(cartItems);
 };
 
 const displayCartContent = (items) => {
   let html = '<section>';
+  let orderInfo = '';
 
+  //   Listning av vilka produkter som finns i kundvagnen...
   items.map(
     (item) =>
       (html += /*html*/ `
@@ -32,18 +33,50 @@ const displayCartContent = (items) => {
             <section>
                 <span>Antal</span>
                 <span>${item.quantity}</span>
-                <button><i class="fa-regular fa-plus"></i></button>
-                <button><i class="fa-regular fa-minus"></i></button>
-                <button><i class="fa-regular fa-trash-can"></i></button>
+                <div>
+                    <button><i class="fa-regular fa-plus"></i></button>
+                    <button><i class="fa-regular fa-minus"></i></button>
+                    <button><i class="fa-regular fa-trash-can"></i></button>
+                </div>
             </section>
         </section>
     `),
   );
 
   html += '</section>';
+  //   Slut på listningen...
 
-  //   Lägg till html till article...
+  // Skapa bestälningsinformation...
+
+  const subTotal = items.reduce((acc, current) => {
+    return acc + current.quantity * current.price;
+  }, 0);
+
+  orderInfo = /*html*/ `
+    <section class="order-info">
+        <h3>Beställningsinformation</h3>
+        <div class="amount">
+            <p>Summa</p>
+            <p>${subTotal}</p>
+        </div>
+        <div class="amount">
+            <p>Frakt</p>
+            <p>${250}</p>
+        </div>
+        <div class="amount">
+            <p>Att betala</p>
+            <p>${subTotal + 250}</p>
+        </div>
+        <a href="/pages/cart/checkout.html" class="btn btn-rounded">Gå till kassan</a>
+    </section>
+`;
+
+  // slut på informationen
+
+  //   Lägg till html till article elementet...
   content.innerHTML = html;
+  //   Lägg till beställningsinformationen till article elementet...
+  content.insertAdjacentHTML('beforeend', orderInfo);
 };
 
 initApp();

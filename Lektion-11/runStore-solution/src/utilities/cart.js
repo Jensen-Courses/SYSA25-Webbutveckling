@@ -5,6 +5,10 @@ export default class Cart {
     this.key = key;
   }
 
+  clearCart() {
+    localStorage.removeItem(this.key);
+  }
+
   //   get items
   getCartItems() {
     const items = JSON.parse(localStorage.getItem(this.key));

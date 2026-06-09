@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
-  border: solid 1px yellow;
 }
 
 .cart-content {
@@ -23,6 +22,7 @@
 
 .cart-content section:last-child {
   display: flex;
+  align-items: first baseline;
   gap: 1rem;
 }
 
@@ -44,4 +44,24 @@
   width: 150px;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+}
+
+/* Beställningsinformation */
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1.4rem;
+  border-left: solid 1px var(--primary-border-color);
+}
+
+.order-info h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

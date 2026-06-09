@@ -29,7 +29,7 @@ export const navbar = /*html*/ `
     </a>
     </li>
     <li class="menu-item">
-        <a href="/pages/users/register.html">Logga in</a>
+        <a href="/pages/users/login.html"><i class="fa-light fa-circle-user"></i></a>
     </li>
     </ul>
 </nav>`;
