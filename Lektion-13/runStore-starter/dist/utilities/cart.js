@@ -49,14 +49,11 @@ export default class Cart {
     }
     removeItem(id) {
         const items = this.#deleteItem(id);
-        // const items = this.getCartItems().filter((i) => i.id !== id);
         this.setCartItems(items);
     }
-    // TODO: Fixa detta senare
     setCartItems(data) {
         localStorage.setItem(this.key, JSON.stringify(data));
     }
-    // TODO: Fixa detta senare
     updateCart(item) {
         let items = this.getCartItems();
         let found = items.find((i) => i.id === item.id);

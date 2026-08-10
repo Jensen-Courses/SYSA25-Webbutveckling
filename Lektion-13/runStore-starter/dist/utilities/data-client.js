@@ -11,7 +11,6 @@ export default class DataClient {
     }
     async listAll() {
         await this.#fetchData(undefined);
-        console.log(this.#data);
         return this.#data;
     }
     async login(data) {
@@ -29,8 +28,7 @@ export default class DataClient {
             throw new Error(`${response.status} - ${response.statusText}`);
         }
         catch (error) {
-            console.log(error);
-            throw new Error(error);
+            console.log(error.message);
         }
     }
     async findById(id) {
@@ -53,7 +51,8 @@ export default class DataClient {
             }
         }
         catch (error) {
-            console.log(error);
+            console.log(error.message);
+            return null;
         }
     }
     async logOut() {
@@ -66,7 +65,7 @@ export default class DataClient {
             }
         }
         catch (error) {
-            console.log(error);
+            console.log(error.message);
         }
     }
     async #addData(data) {
@@ -78,8 +77,6 @@ export default class DataClient {
                 },
                 body: JSON.stringify(data),
             });
-            // if (response.status === 201) return true;
-            // return false;
             if (response.status === 201) {
                 return true;
             }
@@ -88,8 +85,7 @@ export default class DataClient {
             }
         }
         catch (error) {
-            console.log(error);
-            throw new Error(error);
+            console.log(error.message);
         }
     }
     async #fetchData(id) {
@@ -109,7 +105,7 @@ export default class DataClient {
             }
         }
         catch (error) {
-            console.log(error);
+            console.log(error.message);
         }
     }
 }

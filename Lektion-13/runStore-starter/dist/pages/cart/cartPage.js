@@ -1,72 +1,58 @@
 import Navbar from '../../utilities/menu.js';
-import Cart from '/utilities/cart.js';
-
+import Cart from '../../utilities/cart.js';
 const content = document.querySelector('#shopping-cart');
-
 const cart = new Cart('cart');
-
-let navbar = undefined;
+let menu;
 const initApp = () => {
-  navbar = new Navbar();
-  loadCart();
+    menu = new Navbar();
+    loadCart();
 };
-
 const handleIncrementCart = (e) => {
-  const id = e.target.parentElement.getAttribute('id');
-  cart.incrementItem(id);
-  loadCart();
+    const id = e.target.parentElement?.getAttribute('id');
+    cart.incrementItem(id);
+    loadCart();
 };
-
 const handleDecrementCart = (e) => {
-  const id = e.target.parentElement.getAttribute('id');
-  cart.decrementItem(id);
-  loadCart();
+    const id = e.target.parentElement?.getAttribute('id');
+    cart.decrementItem(id);
+    loadCart();
 };
-
 const handleRemoveItemFromCart = (e) => {
-  const id = e.target.parentElement.getAttribute('id');
-  cart.removeItem(id);
-  loadCart();
+    const id = e.target.parentElement?.getAttribute('id');
+    cart.removeItem(id);
+    loadCart();
 };
-
 const loadCart = () => {
-  content.innerHTML = '';
-  const cart = new Cart('cart');
-  const cartItems = cart.getCartItems();
-  navbar.updateCartInfo();
-  displayCartContent(cartItems);
+    content.innerHTML = '';
+    const cart = new Cart('cart');
+    const cartItems = cart.getCartItems();
+    menu.updateCartInfo();
+    displayCartContent(cartItems);
 };
-
 const displayCartContent = (items) => {
-  const productDisplay = createProductDisplay(items);
-  const orderInfo = createOrderInfo(items);
-
-  content.insertAdjacentHTML('afterbegin', productDisplay);
-  content.insertAdjacentHTML('beforeend', orderInfo);
-
-  const buttons = document.querySelectorAll('button');
-
-  buttons.forEach((button) => {
-    if (button.firstChild.classList.contains('fa-plus')) {
-      button.addEventListener('click', handleIncrementCart);
-    } else if (button.firstChild.classList.contains('fa-minus')) {
-      button.addEventListener('click', handleDecrementCart);
-    } else if (button.firstChild.classList.contains('fa-trash-can')) {
-      button.addEventListener('click', handleRemoveItemFromCart);
-    }
-  });
+    const productDisplay = createProductDisplay(items);
+    const orderInfo = createOrderInfo(items);
+    content.insertAdjacentHTML('afterbegin', productDisplay);
+    content.insertAdjacentHTML('beforeend', orderInfo);
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        if (button.firstChild.classList.contains('fa-plus')) {
+            button.addEventListener('click', handleIncrementCart);
+        }
+        else if (button.firstChild.classList.contains('fa-minus')) {
+            button.addEventListener('click', handleDecrementCart);
+        }
+        else if (button.firstChild.classList.contains('fa-trash-can')) {
+            button.addEventListener('click', handleRemoveItemFromCart);
+        }
+    });
 };
-
 const createProductDisplay = (items) => {
-  let html = '<section>';
-
-  if (items.length === 0) {
-    html = '<h3 class="message">Din kundvagn är tom!</h3>';
-  }
-
-  items.map(
-    (item) =>
-      (html += /*html*/ `
+    let html = '<section>';
+    if (items.length === 0) {
+        html = '<h3 class="message">Din kundvagn är tom!</h3>';
+    }
+    items.map((item) => (html += /*html*/ `
         <section class="cart-content">
             <img class="thumbnail" src="/assets${item.imageUrl}" alt="${item.name}">
             <section>
@@ -83,19 +69,15 @@ const createProductDisplay = (items) => {
                 </div>
             </section>
         </section>
-    `),
-  );
-
-  html += '</section>';
-  return html;
+    `));
+    html += '</section>';
+    return html;
 };
-
 const createOrderInfo = (items) => {
-  const subTotal = items.reduce((acc, current) => {
-    return acc + current.quantity * current.price;
-  }, 0);
-
-  const orderInfo = /*html*/ `
+    const subTotal = items.reduce((acc, current) => {
+        return acc + current.quantity * current.price;
+    }, 0);
+    const orderInfo = /*html*/ `
       <section class="order-info">
           <h3>Beställningsinformation</h3>
           <div class="amount">
@@ -113,8 +95,6 @@ const createOrderInfo = (items) => {
           <a href="/pages/cart/checkout.html" class="btn btn-rounded">Gå till kassan</a>
       </section>
   `;
-
-  return orderInfo;
+    return orderInfo;
 };
-
 initApp();
