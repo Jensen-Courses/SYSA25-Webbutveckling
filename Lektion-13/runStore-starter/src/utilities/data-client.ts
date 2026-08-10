@@ -1,24 +1,26 @@
 import { settings } from '../config/settings.js';
+import { IProduct } from '../models/IProduct.js';
 
 export default class DataClient {
-  #data = undefined;
+  #data: IProduct[] = [];
   #url = '';
 
-  constructor(resource) {
+  constructor (resource: string) {
     this.#url = `${settings.BASE_API_URL}/${resource}`;
   }
 
-  async add(data) {
+  async add(data: any) {
     const success = await this.#addData(data);
     return success;
   }
 
-  async listAll() {
-    await this.#fetchData();
+  async listAll(): Promise<IProduct[]> {
+    await this.#fetchData(undefined);
+    console.log(this.#data);
     return this.#data;
   }
 
-  async login(data) {
+  async login(data: any) {
     try {
       const response = await fetch(this.#url, {
         method: 'POST',
@@ -35,16 +37,16 @@ export default class DataClient {
       throw new Error(`${response.status} - ${response.statusText}`);
     } catch (error) {
       console.log(error);
-      throw new Error(error);
+      throw new Error(error as string);
     }
   }
 
-  async findById(id) {
+  async findById(id: string) {
     await this.#fetchData(id);
     return this.#data;
   }
 
-  async getUserInfo(token) {
+  async getUserInfo(token: string) {
     try {
       const response = await fetch(this.#url, {
         method: 'GET',
@@ -59,7 +61,7 @@ export default class DataClient {
         throw new Error(`${response.status} - ${response.statusText}`);
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error as string);
     }
   }
 
@@ -73,11 +75,11 @@ export default class DataClient {
         throw new Error(`${response.status} - ${response.statusText}`);
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error as string);
     }
   }
 
-  async #addData(data) {
+  async #addData(data: any) {
     try {
       const response = await fetch(this.#url, {
         method: 'POST',
@@ -96,11 +98,11 @@ export default class DataClient {
       }
     } catch (error) {
       console.log(error);
-      throw new Error(error);
+      throw new Error(error as string);
     }
   }
 
-  async #fetchData(id = undefined) {
+  async #fetchData(id: string | undefined) {
     try {
       let response;
       if (!id) {
