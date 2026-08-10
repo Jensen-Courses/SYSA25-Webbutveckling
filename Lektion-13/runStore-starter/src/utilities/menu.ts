@@ -1,20 +1,26 @@
 import Cart from './cart.js';
 
 export default class Navbar {
-  #elem = undefined;
+    #elem = undefined;
 
-  constructor() {
-    const navbar = this.#createNavbar();
-    document.querySelector('header').insertAdjacentHTML('afterbegin', navbar);
-    this.updateCartInfo();
-  }
+    constructor () {
+        const navbar = this.#createNavbar();
+        const header = document.querySelector('header');
 
-  updateCartInfo() {
-    document.querySelector('#cart span').innerText = new Cart('cart').itemCount;
-  }
+        if (header) {
+            header.insertAdjacentHTML('afterbegin', navbar);
+            this.updateCartInfo();
+        }
+    }
 
-  #createNavbar() {
-    return /*html*/ `
+    updateCartInfo() {
+        const cartInfo = document.querySelector('#cart span') as HTMLSpanElement;
+        // const cartInfo:HTMLSpanElement = document.querySelector('#cart span');
+        cartInfo.innerText = new Cart('cart').itemCount.toString();
+    }
+
+    #createNavbar() {
+        return /*html*/ `
         <nav>
             <ul>
             <li class="logo">
@@ -49,5 +55,5 @@ export default class Navbar {
             </li>
             </ul>
         </nav>`;
-  }
+    }
 }

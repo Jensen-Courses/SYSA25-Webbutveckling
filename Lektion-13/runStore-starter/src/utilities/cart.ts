@@ -1,13 +1,14 @@
 export default class Cart {
   #itemsCount = 0;
+  key: string;
 
-  constructor(key) {
+  constructor (key: string) {
     this.key = key;
   }
 
   // PROPERTIES
-  get itemCount() {
-    const items = JSON.parse(localStorage.getItem(this.key));
+  get itemCount(): number {
+    const items = JSON.parse(localStorage.getItem(this.key)!);
 
     if (!items) {
       this.#itemsCount = 0;
@@ -23,8 +24,8 @@ export default class Cart {
     localStorage.removeItem(this.key);
   }
 
-  decrementItem(id) {
-    const item = this.getCartItems().find((i) => i.id === id);
+  decrementItem(id: string) {
+    const item = this.getCartItems().find((i: any) => i.id === id);
     if (!item) return;
     item.quantity--;
     if (item.quantity <= 0) {
@@ -37,8 +38,8 @@ export default class Cart {
     this.setCartItems(items);
   }
 
-  incrementItem(id) {
-    const item = this.getCartItems().find((i) => i.id === id);
+  incrementItem(id: string) {
+    const item = this.getCartItems().find((i: any) => i.id === id);
     if (!item) return;
 
     item.quantity++;
@@ -49,28 +50,30 @@ export default class Cart {
   }
 
   getCartItems() {
-    const items = JSON.parse(localStorage.getItem(this.key));
+    const items = JSON.parse(localStorage.getItem(this.key)!);
     if (!items) return [];
     return items;
   }
 
-  removeItem(id) {
+  removeItem(id: string) {
     const items = this.#deleteItem(id);
     // const items = this.getCartItems().filter((i) => i.id !== id);
     this.setCartItems(items);
   }
 
-  setCartItems(data) {
+  // TODO: Fixa detta senare
+  setCartItems(data: any) {
     localStorage.setItem(this.key, JSON.stringify(data));
   }
 
-  updateCart(item) {
+  // TODO: Fixa detta senare
+  updateCart(item: any) {
     let items = this.getCartItems();
-    let found = items.find((i) => i.id === item.id);
+    let found = items.find((i: any) => i.id === item.id);
 
     if (found) {
       item.quantity = found.quantity + 1;
-      items = items.filter((i) => i.id !== item.id);
+      items = items.filter((i: any) => i.id !== item.id);
     } else {
       item.quantity = 1;
     }
@@ -81,7 +84,7 @@ export default class Cart {
   }
 
   // PRIVATE METHODS
-  #deleteItem(id) {
-    return this.getCartItems().filter((i) => i.id !== id);
+  #deleteItem(id: string) {
+    return this.getCartItems().filter((i: any) => i.id !== id);
   }
 }
