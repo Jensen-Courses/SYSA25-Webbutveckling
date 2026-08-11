@@ -1,5 +1,7 @@
+import PageTitle from '../../components/ui/PageTitle';
+
 function Product() {
-  return <h1>Produkt info</h1>;
+  return <PageTitle text='Välkommen till RunStore!' />;
 }
 
 export default Product;

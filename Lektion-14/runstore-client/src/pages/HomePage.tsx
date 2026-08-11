@@ -1,11 +1,12 @@
 import runstore from '../assets/runstore.png';
 import jogging from '../assets/jogging-forest.png';
 import './homePage.css';
+import PageTitle from '../components/ui/PageTitle';
 
 function HomePage() {
   return (
     <main id='home-page' className='container'>
-      <h1>Välkommen till RunStore</h1>
+      <PageTitle text='Välkommen till RunStore!' />
       <div>
         <img src={jogging} alt='forest' className='landing-image' />
         <img src={runstore} alt='logotype' className='landing-logo' />
