@@ -12,7 +12,7 @@ function ProductCard({ product }: Props) {
       <NavLink to={`/product/${product.id}`}>
         <img src={product.imageUrl} alt={product.name} />
       </NavLink>
-      <p>{product.price.toFixed(2)} Kr</p>
+      <p>{parseInt(product.price.toString()).toFixed(2)} Kr</p>
     </section>
   );
 }
