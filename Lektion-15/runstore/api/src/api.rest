@@ -1,0 +1,5 @@
+### GET - List all products
+GET http://localhost:5001/api/products
+
+### GET - Find a product
+GET http://localhost:5001/api/products/40f6e853ffb2424bb3eb652ba03576f2
