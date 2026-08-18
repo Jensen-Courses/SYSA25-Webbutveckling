@@ -10,18 +10,18 @@ function ProductDetailsPage() {
   const params = useParams();
   const api_url: string = import.meta.env.VITE_API_URL;
 
-  useEffect(() => {
-    fetch(`${api_url}/${params.id}`)
-      .then((response) => response.json())
-      .then((result) => setProduct(result));
-  }, [params.id, api_url]);
-
-  // Change to this when we are ready with our node api...
   // useEffect(() => {
   //   fetch(`${api_url}/${params.id}`)
   //     .then((response) => response.json())
-  //     .then((result) => setProduct(result.data));
+  //     .then((result) => setProduct(result));
   // }, [params.id, api_url]);
+
+  // Change to this when we are ready with our node api...
+  useEffect(() => {
+    fetch(`${api_url}/${params.id}`)
+      .then((response) => response.json())
+      .then((result) => setProduct(result.data));
+  }, [params.id, api_url]);
 
   return (
     <>

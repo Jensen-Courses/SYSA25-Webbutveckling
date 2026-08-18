@@ -8,18 +8,18 @@ function ProductListPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const api_url: string = import.meta.env.VITE_API_URL;
 
-  useEffect(() => {
-    fetch(api_url)
-      .then((response) => response.json())
-      .then((result) => setProducts(result));
-  }, [api_url]);
-
-  // Change to this when we are ready with our node api...
   // useEffect(() => {
   //   fetch(api_url)
   //     .then((response) => response.json())
-  //     .then((result) => setProducts(result.data));
+  //     .then((result) => setProducts(result));
   // }, [api_url]);
+
+  // Change to this when we are ready with our node api...
+  useEffect(() => {
+    fetch(api_url)
+      .then((response) => response.json())
+      .then((result) => setProducts(result.data));
+  }, [api_url]);
 
   return (
     <>

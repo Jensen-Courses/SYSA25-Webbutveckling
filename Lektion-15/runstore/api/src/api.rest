@@ -2,4 +2,28 @@
 GET http://localhost:5001/api/products
 
 ### GET - Find a product
-GET http://localhost:5001/api/products/40f6e853ffb2424bb3eb652ba03576f2
+GET http://localhost:5001/api/products/6b60ebc6-b776-4cfc-ac40-fa675df7fba6
+
+### POST - Add a new product
+POST http://localhost:5001/api/products
+Content-Type: application/json
+
+{
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "imageUrl": "https://res.cloudinary.com/softtech-dev/image/upload/v1786556530/shoe-2_alelr0.jpg",
+    "itemNumber": "1001",
+    "name": "Trail 25",
+    "supplierName": "Company",
+    "price": 1895
+}
+
+### PUT - Update price for a product
+PUT http://localhost:5001/api/products/40f6e853ffb2424bb3eb652ba03576f2
+Content-Type: application/json
+
+{
+    "price": 295
+}
+
+### DELETE - Delete a product
+DELETE http://localhost:5001/api/products/6b60ebc6-b776-4cfc-ac40-fa675df7fba6

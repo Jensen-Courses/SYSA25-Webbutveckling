@@ -1,8 +1,14 @@
 import express from 'express';
-import { findProductById, listAllProducts } from '../controllers/products-controller';
+import { addProduct, findProductById, listAllProducts, removeProduct, updateProduct } from '../controllers/products-controller';
 
 const router = express.Router();
 
-router.route('/').get(listAllProducts);
-router.route('/:id').get(findProductById);
+router.route('/')
+    .get(listAllProducts)
+    .post(addProduct);
+router.route('/:id')
+    .get(findProductById)
+    .put(updateProduct)
+    .delete(removeProduct);
+
 export default router;
