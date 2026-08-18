@@ -27,3 +27,27 @@ Content-Type: application/json
 
 ### DELETE - Delete a product
 DELETE http://localhost:5001/api/products/6b60ebc6-b776-4cfc-ac40-fa675df7fba6
+
+### GET - List all customers
+GET http://localhost:5001/api/customers
+
+### POST - Add new customer
+POST http://localhost:5001/api/customers
+Content-Type: application/json
+
+{
+    "firstName": "Kalle",
+    "lastName": "Anka",
+    "email": "kalle@mail.com"
+}
+
+### POST - Add address for a specific customer
+POST http://localhost:5001/api/customers/address
+Content-Type: application/json
+
+{
+    "customerId": "7928d75c-d9f8-4414-b094-3f25aea299ee",
+    "addressLine": "Gatan 1",
+    "postalCode": "12345",
+    "city": "Staden"
+}
