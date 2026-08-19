@@ -1,0 +1,11 @@
+model Product{
+  id String @id @default(uuid())
+  description String
+  itemNumber String @unique
+  imageUrl String?
+  name String
+  price Decimal @db.Decimal(18,2)
+  supplierName String
+
+  @@map("products")
+}

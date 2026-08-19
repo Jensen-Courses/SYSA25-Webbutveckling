@@ -1,0 +1,22 @@
+model Customer{
+  id String @id @default(uuid())
+  firstName String
+  lastName String
+  email String @unique
+
+  addresses Address[]
+
+  @@map("customers")
+}
+
+model Address{
+  id String @id @default(uuid())
+  addressLine String
+  postalCode String
+  city String
+
+  customerId String
+  customer Customer @relation(fields: [customerId], references: [id])
+
+  @@map("addresses")
+}
