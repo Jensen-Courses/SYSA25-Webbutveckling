@@ -1,1 +1,7 @@
-<p>product-card works!</p>
+@if (product(); as product) {
+  <section class="product-item" routerLink="/products/{{ product.id }}">
+    <h4>{{ product.name }}</h4>
+    <img src="{{ product.imageUrl }}" alt="{{ product.name }}" />
+    <p>Pris: {{ product.price }}</p>
+  </section>
+}

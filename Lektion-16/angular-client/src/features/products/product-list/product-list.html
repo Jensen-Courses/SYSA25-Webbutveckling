@@ -1,1 +1,6 @@
 <app-page-title title="{{ pageTitle() }}"> </app-page-title>
+<article id="product-list">
+  @for (product of products(); track product.id) {
+    <app-product-card [product]="product" />
+  }
+</article>
